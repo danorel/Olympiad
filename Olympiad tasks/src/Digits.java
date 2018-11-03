@@ -1,14 +1,15 @@
 import java.util.Scanner;
 
 public class Digits {
+
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int number;
-        do{
-            number = scanner.nextInt();
-        } while(number > 99 || number < 10);
-        int partOne = number / 10;
-        int partTwo = number % 10;
-        System.out.println(partOne + " " + partTwo);
+        int n;
+        Scanner in = new Scanner(System.in);
+        do {
+            n = in.nextInt();
+        }while (10 > n || n > 99);
+        int b = n / 10;
+        int c = n % 10;
+        System.out.print(b + " " + c);
     }
 }

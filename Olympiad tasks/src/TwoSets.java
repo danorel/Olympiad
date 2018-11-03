@@ -1,5 +1,12 @@
-import java.io.*;
 import java.util.Scanner;
+/*
+   The main idea of the task is to count the number of solutions
+   of intersection of two circles.
+   Prints -1, if such intersection consists of infinity solutions.
+   Prints 0, if the circles don't cross each other.
+   Prints 1, if the circles contain 1 point.
+   Prints 2, if the circles contain 2 points.
+*/
 public class TwoSets {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

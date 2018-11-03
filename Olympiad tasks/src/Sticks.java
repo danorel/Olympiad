@@ -1,4 +1,8 @@
 import java.util.Scanner;
+/*
+   The main idea of the task is to count the minimum number of
+   sticks, which have to build the cubes one by one.
+*/
 public class Sticks {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
