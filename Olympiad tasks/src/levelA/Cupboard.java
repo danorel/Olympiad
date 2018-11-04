@@ -26,7 +26,7 @@ public class Cupboard {
             Y = scanner.nextInt();
         } while(Y < 1 || Y > 1e2);
 
-        if((A * B <= X * Y) || (B * C <= X * Y) || (A * C <= X * Y) ){
+        if((((A <= X && B <= Y) || (B <= X && A <= Y))) || ((A <= X && C <= Y) || (A <= Y && C <= X)) || ((B <= X && C <= Y) || (B <= Y && C <= X))){
             System.out.println("YES");
         } else {
             System.out.println("NO");
