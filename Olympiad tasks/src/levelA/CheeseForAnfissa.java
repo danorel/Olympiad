@@ -7,14 +7,22 @@ import java.util.Scanner;
 public class CheeseForAnfissa {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int Length, Height, angle;
+        int Length, Height, degrees;
+        double radians;
         int accuracy = 3;
-        double Area;
+        double Area = 0.0;
         Length = scanner.nextInt();
         Height = scanner.nextInt();
-        angle = scanner.nextInt();
-        angle = 90 - angle;
-        Area = ((Length*(Length*Math.sqrt(2) - 2*Height*Math.tan(Math.toRadians(angle))))/2)*(Height / Math.cos(Math.toRadians(angle)));
+        do{
+            degrees = scanner.nextInt();
+        } while(degrees < 0 || degrees > 90);
+        degrees = 90 - degrees;
+        radians = Math.toRadians(degrees);
+        if(radians < Math.atan(Height*Math.sqrt(2)/Length) && radians >= 0){
+            Area = ((Length*(Length*Math.sqrt(2) - 2*Height*Math.tan(radians)))/2)*(Height / Math.cos(radians));
+        } else if(degrees == Math.atan(Height*Math.sqrt(2)/Length)) {
+            Area = (Height*Length*Math.sqrt(2))/(2*Math.sin(Math.atan(Height*Math.sqrt(2)/Length)));
+        }
         System.out.printf("%." + accuracy + "f", Area );
     }
 }
