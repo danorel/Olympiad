@@ -11,9 +11,11 @@ public class DividableByEight {
             DecimalNumber /= 10;
             NumberLength++;
         }
+
         char [] Number = new char[NumberLength];
         String num = Integer.toString(BI.intValue());
         Number = num.toCharArray();
+
         DecimalNumber = BI.intValue();
         if(DecimalNumber % 8 == 0){
             MIN = DecimalNumber;
@@ -43,8 +45,6 @@ public class DividableByEight {
                 decimalNumber = Integer.parseInt(number);
                 if(decimalNumber % 8 == 0 && decimalNumber <= MIN){
                     MIN = decimalNumber;
-                } else {
-                    MIN = -1;
                 }
                 num1 = (int)Number[counter];
                 num2 = (int)Number[numberLength];
