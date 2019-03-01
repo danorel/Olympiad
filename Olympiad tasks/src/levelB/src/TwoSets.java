@@ -1,3 +1,5 @@
+package src;
+
 import java.util.Scanner;
 /*
    The main idea of the task is to count the number of solutions
